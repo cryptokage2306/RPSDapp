@@ -1,0 +1,46 @@
+.pentagon {
+    width: 600px; /* Adjust the width and height to your desired size */
+    height: 520px;
+    position: relative;
+    margin: 50px auto;
+  }
+  
+  .pentagonButton {
+    width: 120px; /* Adjust the size of the circular buttons */
+    height: 120px;
+    background-color: #FFD700; /* Set your desired background color */
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+  }
+  
+  .pentagonButton:nth-child(1) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .pentagonButton:nth-child(2) {
+    top: 40%;
+    left: 10%;
+  }
+  
+  .pentagonButton:nth-child(3) {
+    top: 70%;
+    left: 30%;
+  }
+  
+  .pentagonButton:nth-child(4) {
+    top: 70%;
+    left: 70%;
+  }
+  
+  .pentagonButton:nth-child(5) {
+    top: 40%;
+    left: 90%;
+  }
+  

@@ -7,14 +7,14 @@ import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
-  const { isConnected } = useAccount();
+  const { isConnected, address } = useAccount();
   const router = useRouter()
 
   useEffect(() => {
     if (!isConnected) {
       return;
     }
-    router.push('/game').catch((err) =>  console.log(err))
+    router.push(`/create`).catch((err) =>  console.log(err))
   }, [isConnected, router])
 
   return (

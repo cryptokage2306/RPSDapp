@@ -16,6 +16,7 @@ const { chains, provider } = configureChains(NETWORKS, [publicProvider()])
 const { connectors } = getDefaultWallets({
   appName: SITE_NAME,
   chains,
+  projectId: "dadadasd"
 })
 
 const client = createClient({
@@ -33,3 +34,5 @@ export function Web3Provider(props: Props) {
     </WagmiConfig>
   )
 }
+
+export {provider};
