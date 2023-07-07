@@ -18,7 +18,6 @@ import {
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { ChevronRightIcon, ChevronDownIcon } from "@chakra-ui/icons";
-import { Logo } from "../../Reusables/helper";
 import { SITE_NAME } from "../../configuration/Config";
 interface Props {
   className?: string;
@@ -65,7 +64,7 @@ export function Header(props: Props) {
             bg: useColorModeValue("green.200", "green.900"),
           }}
         >
-          <Logo />
+          Home
         </Link>
         <Flex display={{ base: "none", md: "flex" }} ml={10}>
           <DesktopNav />

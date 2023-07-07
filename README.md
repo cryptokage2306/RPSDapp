@@ -1,62 +1,45 @@
-## DappBoilerplate
+# Rock Paper Scissor Spock Lizard Dapp
 
-This Decentralized Application Boilerplate is built with [React](https://fr.reactjs.org/) + [RainbowKit](https://rainbowkit.com) + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org/) + [Chakra-ui](https://chakra-ui.com/).
+Welcome to the Rock Paper Scissor Spock Lizard Dapp! This decentralized application allows you to play the game with your opponent using smart contracts on the Ethereum blockchain.
 
-Including features like:
-- Fully functional Nextjs App
-- connect wallet
-- show account balance
-- sign message on-chain
-- Switch between chains (Ethereum and the Layer 2s)
-- etc.
+## Game Page
 
-## Getting Started
+### Game Creation
 
-First, 
-> clone/fork DappBoilerplate:
+To create a game, you need to visit the `/game` page. Here are the required steps:
 
-```bash
-git clone https://github.com/JalelTounsi/DappBoilerplate.git
-```
+1. Enter your password: Provide a password that will be used to secure the game.
+2. Enter your opponent's Ethereum address: Specify the Ethereum address of the player you want to challenge.
+3. Set the amount: Determine the amount of Ether you want to wager on the game.
 
-> install your dependencies:
+Once you have provided the necessary information, submit the form to create the game. The smart contract will hold the wagered amount until the game is resolved.
 
-```bash
-cd dappBoilerplate
-yarn install
-```
+## Contract - First Player
 
-> run the development server:
+### Solving the Game or Withdrawing the Amount
 
-```bash
-yarn dev
-```
+After creating the game, as the first player, you will have access to the `/{contract}/firstplayer` page. Here, you have two options:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Solve the game: Use the provided interface to play your move in the Rock Paper Scissor Spock Lizard game. If both players have submitted their moves, the smart contract will determine the winner and distribute the wagered amount accordingly.
+2. Withdraw the amount: If the opponent has not played their move within the specified timeout, you can choose to withdraw the wagered amount.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Make sure to keep track of the game status and resolve it within the specified timeout to ensure a fair outcome.
 
-## Learn More
+## Contract - Opponent
 
-To learn more about this stack, take a look at the following resources:
+### Submitting the Move or Withdrawing the Amount
 
-- [RainbowKit Documentation](https://rainbowkit.com) - Learn how to customize your wallet connection flow.
-- [wagmi Documentation](https://wagmi.sh) - Learn how to interact with Ethereum.
-- [Next.js Documentation](https://nextjs.org/docs) - Learn how to build a Next.js application.
-- [Chakra-ui Documentation](https://chakra-ui.com/getting-started) - Learn how to use Chakra UI in your project
+As the opponent, you will have access to the `/{contract}/opponent` page after the game has been created. Here, you can take the following actions:
 
-your help, sponsorship, feedback and contributions are welcome!
+1. Submit your move: Use the provided interface to play your move in the Rock Paper Scissor Spock Lizard game. Remember to provide the same amount of Ether as wagered by the first player.
+2. Withdraw the amount: If the first player fails to solve the game within the specified timeout, you can choose to withdraw the wagered amount.
 
-## Deploy on Vercel
+Ensure you make your move within the specified time frame and follow the rules of the game to ensure a fair outcome.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Note: Remember to have a compatible Ethereum wallet and sufficient Ether balance to interact with the Dapp. Enjoy playing Rock Paper Scissor Spock Lizard!
 
-## sponsor this open source project
+## License
 
-if you want help maintain and enrich this project
-
-BTC address: bc1qmluclj3nrcsgvk2kee8jhrgygldwh3jwv50emg
-
-ETH/ERC20 address: 0x0cF92835aEbB21bD864eC1C01Ae0C92F13A46386
+This project is licensed under the [MIT License](LICENSE).
