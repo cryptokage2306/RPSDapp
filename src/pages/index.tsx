@@ -14,7 +14,7 @@ const Home: NextPage = () => {
     if (!isConnected) {
       return;
     }
-    router.push(`/create`).catch((err) =>  console.log(err))
+    router.push(`/game`).catch((err) =>  console.log(err))
   }, [isConnected, router])
 
   return (
