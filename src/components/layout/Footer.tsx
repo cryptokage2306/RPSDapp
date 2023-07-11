@@ -1,28 +1,7 @@
 import React from "react";
-import {
-  Box,
-  Container,
-  Link,
-  Stack,
-  Text,
-  useBreakpointValue,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import {
-  FaDiscord,
-  FaGithub,
-  FaLinkedin,
-  FaMedium,
-  FaTwitter,
-} from "react-icons/fa";
-import {
-  SITE_DESCRIPTION,
-  SOCIAL_GITHUB,
-  SOCIAL_LINKEDIN,
-  SOCIAL_MEDIUM,
-  SOCIAL_TWITTER,
-  SOCIAL_DISCORD,
-} from "../../configuration/Config";
+import { Box, Container, Stack, useColorModeValue } from "@chakra-ui/react";
+import { FaGithub } from "react-icons/fa";
+import { SOCIAL_GITHUB } from "../../configuration/Config";
 import { NetworkStatus } from "../NetworkStatus";
 import { Logo, SocialButton } from "../../Reusables/helper";
 
@@ -31,7 +10,6 @@ interface Props {
 }
 
 export function Footer(props: Props) {
-  const className = props.className ?? "";
   return (
     <Box
       bg={useColorModeValue("gray.50", "gray.900")}
@@ -55,34 +33,10 @@ export function Footer(props: Props) {
       >
         <Stack direction={"row"} spacing={6}>
           <SocialButton
-            label={"Twitter"}
-            href={`https://twitter.com/${SOCIAL_TWITTER}`}
-          >
-            <FaTwitter />
-          </SocialButton>
-          <SocialButton
-            label={"Medium"}
-            href={`https://medium.com/${SOCIAL_MEDIUM}`}
-          >
-            <FaMedium />
-          </SocialButton>
-          <SocialButton
             label={"Github"}
             href={`https://github.com/${SOCIAL_GITHUB}`}
           >
             <FaGithub />
-          </SocialButton>
-          <SocialButton
-            label={"Discord"}
-            href={`https://discord.com/channels/${SOCIAL_DISCORD}`}
-          >
-            <FaDiscord />
-          </SocialButton>
-          <SocialButton
-            label={"LinkedIn"}
-            href={`https://www.linkedin.com/in/${SOCIAL_LINKEDIN}`}
-          >
-            <FaLinkedin />
           </SocialButton>
         </Stack>
       </Container>
