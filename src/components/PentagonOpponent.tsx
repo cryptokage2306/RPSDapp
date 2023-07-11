@@ -98,6 +98,7 @@ const PentagonOpponent = () => {
       return;
     }
     setShowJ1Timeout(opponentMove.toString() !== "0");
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeremain, opponentMove]);
 
   useEffect(() => {

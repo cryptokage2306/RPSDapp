@@ -1,9 +1,12 @@
-import React from 'react'
-import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, SOCIAL_TWITTER } from '../configuration/Config'
-import { DefaultSeo } from 'next-seo'
+import React from "react";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "../configuration/Config";
+import { DefaultSeo } from "next-seo";
 
 export default function Seo() {
-  const origin = typeof window !== 'undefined' && window.location.origin ? window.location.origin : SITE_URL
+  const origin =
+    typeof window !== "undefined" && window.location.origin
+      ? window.location.origin
+      : SITE_URL;
 
   return (
     <DefaultSeo
@@ -14,7 +17,7 @@ export default function Seo() {
       defaultOpenGraphImageWidth={1200}
       defaultOpenGraphImageHeight={630}
       openGraph={{
-        type: 'website',
+        type: "website",
         siteName: SITE_NAME,
         url: origin,
         images: [
@@ -24,11 +27,6 @@ export default function Seo() {
           },
         ],
       }}
-      twitter={{
-        handle: `@${SOCIAL_TWITTER}`,
-        site: `@${SOCIAL_TWITTER}`,
-        cardType: 'summary_large_image',
-      }}
     />
-  )
+  );
 }
