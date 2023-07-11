@@ -119,14 +119,6 @@ const PentagonFirstPlayer = () => {
       Contract: {contract}
       <br />
       {contract && (
-        <div>
-          Share this string to opponent
-          <br />
-          <a>http://localhost:3000/{contract}/opponent</a>
-        </div>
-      )}
-      <br />
-      {contract && (
         <Button
           onClick={() =>
             copy(
@@ -143,10 +135,17 @@ const PentagonFirstPlayer = () => {
           Copy
         </Button>
       )}{" "}
+      {contract && (
+        <div>
+          Share this string to opponent
+          <br />
+          <a>https://papaya-kashata-3d1165.netlify.app/{contract}/opponent</a>
+        </div>
+      )}
       <br />
       {success ? (
         <a href={`/${contract}/firstplayer`}>
-          http://localhost:3000/{contract}/firstplayer
+          https://papaya-kashata-3d1165.netlify.app/{contract}/firstplayer
         </a>
       ) : (
         <div>
